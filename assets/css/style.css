@@ -1,0 +1,571 @@
+@import url(https://fonts.googleapis.com/css?family=Bebas+Neue:regular);
+@import url(https://fonts.googleapis.com/css?family=Nunito+Sans:200,200italic,300,300italic,regular,italic,600,600italic,700,700italic,800,800italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+.margin-escape {
+    margin: 0;
+    padding: 0;
+}
+
+.slogan {
+    height: 35px;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header__slogan {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.header__menu {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 0 60px;
+    border-bottom: 1px solid #000;
+}
+
+.sticky-header {
+    width: 100%;
+    background: #000;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+  
+    align-self: center;
+    transition: 0.3s;
+    z-index: 111111;
+}
+
+.navbar__nav {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    margin-bottom: 0;
+}
+
+.navbar__item:not(.navbar__item:last-child) {
+    margin-right: 20px;
+    
+}
+.sticky-header .navbar__link {
+    color: #fff;
+}
+.navbar__link {
+    color: #000;
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.sticky-header .logo__title {
+    color: #fff;
+}
+.logo__title {
+   margin-bottom: 0;
+    font-family: "Nunito sans", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 28px;
+    margin-left: -100px;
+    color: #000;
+}
+
+.menuBar__icon {
+    height: 40px;
+    width: 35px;
+    display: none;
+}
+
+.sticky-header .menuBar__icon div {
+    background: #fff;
+}
+.menuBar__icon div {
+    height: 2px;
+    width: 100%;
+    background: #000;
+    margin-bottom: 10px;
+}
+
+.main__content {
+    height: fit-content;
+    background: url("/assets/images/pexels-tbee-82299.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 10px;
+}
+
+.meme__head {
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 22px;
+}
+.meme__info {
+    color: #fff;
+    font-size: 15px;
+    text-align: center;
+    font-weight: 300;
+}
+.main{
+    display: flex;
+    justify-content: center;
+   
+}
+.meme__wrapper {
+    display: grid;
+    grid-template-columns: 40px 320px 40px;
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+.memes{
+    width: 320px;
+    height: 320px;
+    
+    
+}
+.memes img {
+    width: 100%;
+    height: 100%;
+}
+.memeFrame__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1/4;
+    height: 40px;
+    background: #fff;
+}
+.memeFrame__title {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 26px;
+    margin-bottom: 0;
+}
+.bg__black {
+    margin: 5px 5px 0;
+}
+.bg__black img {
+    width: 63px;
+}
+
+.memeFrame__side {
+    background: #fff;
+    position: relative;
+}
+.memeFrame__side h5 {
+    transform: rotate(90deg);
+    font-size: 14px;
+    font-family: "Bebas Neue", sans-serif;
+}
+.left__side {
+    position: absolute;
+    width: 120px;
+    left: -45px;
+    top: 50%;
+}
+.right__side {
+    position: absolute;
+    width: 120px;
+    left: -45px;
+    top: 50%;
+}
+
+
+#lower{
+    grid-column: 1/4;
+    resize: vertical;
+    height: 40px;
+    font-size: 25px;
+    overflow: hidden;
+  
+    text-align: center;
+    outline: none;
+  
+    font-weight: 600;
+    font-family: sans-serif;
+    border: none;
+    padding: 5px;
+}
+
+
+.meme__actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#inputFile{
+    display: none;
+    margin-top: 50px;
+}
+.access-btn {
+    background: #ec9b01;
+    border-radius: 0;
+    width: 160px;
+    color: #fff;
+   
+    font-size: 18px;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.access-btn i{
+    margin-right: 10px;
+    
+}
+
+
+.put-some-black {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+.putSomeBalck__icon {
+    width: 50px;
+    margin-left: 110px;
+    margin-bottom: 20px;
+    
+}
+.putSomeBalck__icon img {
+    width: 100%;
+    
+}
+.putSomeBalck__hashtag {
+    color: #fff;
+    font-size: 24px;
+    font-family: "Nunito sans", sans-serif;
+    letter-spacing: 2px;
+    text-align: center;
+    font-weight: 300;
+}
+
+
+.slider__wrapper {
+    padding-bottom: 60px !important;
+    padding-top: 60px !important;
+    
+}
+.meme__slider {
+    padding: 0 60px;
+    position: relative;
+}
+
+
+.meme__slideItem {
+    height: 300px;
+    width: 300px;
+    
+    position: relative;
+}
+
+.meme__outlet {
+    height: 300px;
+    width: 300px;
+}
+.meme__outletFrame {
+    height: 100%;
+    width: 100%;
+}
+.meme__imgItem {
+    height: 215px;
+    width: 215px;
+    position: absolute;
+    top: 44px;
+    left: 44px;
+}
+.meme__imgItem img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.meme__template {
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+.meme__template h3 {
+    font-family: "Bebas Neue", sans-serif;
+    color: #000;
+    font-size: 20px;
+
+}
+.next__button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+}
+.prev__button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15px;
+}
+.next-btn {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 60px;
+    color: #fff;
+}
+.next-btn:focus {
+    outline: none;
+}
+.prev-btn {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 60px;
+    color: #fff;
+}
+.prev-btn:focus {
+    outline: none;
+}
+
+.black__footer {
+    padding: 70px 60px 60px;
+}
+
+.about__title {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 20px;
+    letter-spacing: 2.4px;
+}
+
+.about__info {
+    font-size: 16px;
+    color: #6a6a6a;  
+    margin-bottom: 20px; 
+    font-family: "Nunito sans", sans-serif;
+}
+.insta-icon a {
+    color: #000;
+    font-size: 20px;
+}
+.footer__menuWrapper {
+    display: flex;
+    justify-content: center;
+}
+.footer__nav {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+.footer__navItem {
+    margin-bottom: 15px;
+}
+.footer__navLink {
+    text-decoration: none;
+    font-size: 16px;
+    color: #6a6a6a;  
+    
+    font-family: "Nunito sans", sans-serif;
+}
+.newsletter__input {
+    width: 255px;
+    border-radius: 0;
+    font-size: 16px;
+}
+
+.submit-btn {
+    margin-top: 20px;
+    position: relative;
+    background: #000;
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+    border-radius: 0;
+    padding: 14px 28px;
+    outline: 0;
+    border: 0;
+    
+}
+
+  
+.submit-btn::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: #fff;
+    z-index: -1;
+    
+    left: 0;
+    top: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+    
+  }
+  .submit-btn:hover {
+      color: #000;
+      border: 1px solid #000;
+      z-index: 11;
+  }
+  .submit-btn:hover::before{
+    transform: scaleX(1);
+    transform-origin: left;
+    
+  }
+
+  /* sidemenu */
+  #sideMenu {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.781);
+      top: 0;
+      left: 0;
+      z-index: 999999999;
+      margin-left: -100%;
+      transition: 0.5s;
+  }
+  #sideMenu.openMenu {
+      margin-left: 0;
+      transition: 0.5s;
+  }
+  .sidemenu__wrapper {
+      width: 70%;
+      height: 100%;
+      background: #000;
+      margin-top: -10px;
+  }
+  .close__button {
+      margin-left: 20px;
+      margin-top: 20px;
+  }
+  .close-btn {
+      background: none;
+      outline: none;
+      border: none;
+      font-size: 72px;
+      color: #fff;
+  }
+
+  .sidemenu__nav {
+      list-style: none;
+      padding-right: 25px;
+  }
+  .sideNav__item {
+      
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+  }
+  .sideNav__item:not(.sideNav__item:last-child) {
+      border-bottom: 1px solid #fff;
+  }
+  .sideNav__link {
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 18px;
+      text-decoration: none;
+  }
+  .sideNav__linkAcc {
+      text-decoration: none;
+      color: rgb(180, 170, 170);
+      font-size: 18px;
+  }
+
+
+  /* media queries */
+  @media screen and (max-width: 1078px) {
+    .logo__title {
+        margin-left: 16px;
+    }
+  }
+
+  @media screen and (max-width: 990px) {
+    .menuBar__icon {
+        display: block;
+        cursor: pointer;
+    }
+    .navbar_left, .navbar_right {
+        display: none;
+    }
+    
+  }
+
+  @media screen and (max-width: 774px) {
+    .footer__menuWrapper {
+        justify-content: start;
+    }
+    .header__slogan {
+        letter-spacing: 2px;
+        font-size: 10px;
+    }
+    .access-btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .header__menu {
+        padding: 0 16px;
+    }
+    
+  }
+
+  @media screen and (max-width: 420px) {
+    .meme__wrapper {
+        width: 300px;
+        height: 350px;
+        grid-template-columns: 40px 220px 40px;
+    }
+    .memes {
+        width: 260px;
+        height: 260px;
+    }
+    .memeFrame__title {
+        font-size: 18px;
+    }
+    .bg__black img {
+        width: 40px;
+    }
+    
+  }
+
+  @media screen and (min-width:737px) and (max-width: 1030px) {
+    
+    .meme__template {
+        left: 33%;
+    }
+  }
+
+  @media screen and (max-width:737px){
+    .meme__slideItem {
+        display: flex !important;
+        justify-content: center;
+    }
+    .meme__imgItem {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+       
+   
+  }
+
+
+  
