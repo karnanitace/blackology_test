@@ -120,12 +120,14 @@ body {
     text-align: center;
     text-transform: uppercase;
     font-size: 22px;
+    margin-bottom: 5px;
 }
 .meme__info {
     color: #fff;
     font-size: 15px;
     text-align: center;
     font-weight: 300;
+    margin-bottom: 10px;
 }
 .main{
     display: flex;
@@ -134,14 +136,14 @@ body {
 }
 .meme__wrapper {
     display: grid;
-    grid-template-columns: 40px 320px 40px;
+    grid-template-columns: 60px 260px 60px;
     position: relative;
-    width: 400px;
-    height: 400px;
+    width: 380px;
+    height: 380px;
 }
 .memes{
-    width: 320px;
-    height: 320px;
+    width: 260px;
+    height: 260px;
     
     
 }
@@ -154,24 +156,31 @@ body {
     align-items: center;
     justify-content: center;
     grid-column: 1/4;
-    height: 40px;
+    height: 60px;
     background: #fff;
 }
 .memeFrame__title {
     font-family: "Bebas Neue", sans-serif;
     font-size: 26px;
-    margin-bottom: 0;
+    
+    
 }
 .bg__black {
-    margin: 5px 5px 0;
+    margin: 0 5px;
+    
 }
 .bg__black img {
-    width: 63px;
+    width:62px;
+    margin-top: 3px;
+    
 }
+
+
 
 .memeFrame__side {
     background: #fff;
     position: relative;
+    width: 60px;
 }
 .memeFrame__side h5 {
     transform: rotate(90deg);
@@ -181,13 +190,13 @@ body {
 .left__side {
     position: absolute;
     width: 120px;
-    left: -45px;
+    left: -36px;
     top: 50%;
 }
 .right__side {
     position: absolute;
     width: 120px;
-    left: -45px;
+    left: -36px;
     top: 50%;
 }
 
@@ -195,24 +204,38 @@ body {
 #lower{
     grid-column: 1/4;
     resize: vertical;
-    height: 40px;
-    font-size: 25px;
+    height: 60px;
+    font-size: 28px;
     overflow: hidden;
   
     text-align: center;
     outline: none;
-  
+    caret-color: #ec9b01;
     font-weight: 600;
-    font-family: sans-serif;
+    font-family: "Bebas Neue", sans-serif;
     border: none;
+    padding-top: 13px;
+}
+
+.warning {
+    text-align: center;
+    margin: 10px auto;
     padding: 5px;
+    color: rgb(94, 35, 35);
+    background: gray;
+    font-weight: 700;
+    width: 380px;
+    display: none;
+}
+.warning.show-warning {
+    display: block;
 }
 
 
 .meme__actions {
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 #inputFile{
@@ -223,8 +246,11 @@ body {
     background: #ec9b01;
     border-radius: 0;
     width: 160px;
+    text-decoration: none;
+    padding: 10px 12px;
     color: #fff;
-   
+    outline: none;
+    border: none;
     font-size: 18px;
     font-family: "Bebas Neue", sans-serif;
 }
@@ -348,6 +374,11 @@ body {
     padding: 70px 60px 60px;
 }
 
+.footer__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
 .about__title {
     font-size: 20px;
     text-transform: uppercase;
@@ -366,6 +397,8 @@ body {
     color: #000;
     font-size: 20px;
 }
+
+
 .footer__menuWrapper {
     display: flex;
     justify-content: center;
@@ -387,7 +420,8 @@ body {
 }
 .newsletter__input {
     width: 255px;
-    border-radius: 0;
+    border: 1px solid #6a6a6a;
+    padding: 10px 12px;
     font-size: 16px;
 }
 
@@ -433,6 +467,33 @@ body {
     
   }
 
+  .copyright__footer {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 150px;
+  }
+  .copyright__brand {
+      text-transform: uppercase;
+      letter-spacing: 2.4px;
+      color: #1c1b1b;
+      margin-bottom: 15px;
+      text-decoration: none;
+      display: block;
+  }
+  .copyright__powered {
+      text-decoration: none;
+      color: #6a6a6a;
+  }
+  .footer__brands {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+  }
+  .brand__items {
+      margin-right: 10px;
+  }
+
   /* sidemenu */
   #sideMenu {
       position: fixed;
@@ -470,6 +531,7 @@ body {
   .sidemenu__nav {
       list-style: none;
       padding-right: 25px;
+      padding-left: 25px;
   }
   .sideNav__item {
       
@@ -507,6 +569,9 @@ body {
     .navbar_left, .navbar_right {
         display: none;
     }
+    .copyright__footer {
+        flex-direction:  column;
+    }
     
   }
 
@@ -519,30 +584,53 @@ body {
         font-size: 10px;
     }
     .access-btn {
-        width: 100%;
+        
         margin-bottom: 10px;
     }
     .header__menu {
         padding: 0 16px;
+    }
+    .footer__wrapper {
+        grid-template-columns: 1fr;
+    }
+    .footer__topic {
+        margin-bottom: 20px;
     }
     
   }
 
   @media screen and (max-width: 420px) {
     .meme__wrapper {
-        width: 300px;
-        height: 350px;
-        grid-template-columns: 40px 220px 40px;
+        width: 280px;
+        height: 280px;
+        grid-template-columns: 40px 180px 40px;
     }
     .memes {
-        width: 260px;
-        height: 260px;
+        width: 180px;
+        height: 180px;
     }
     .memeFrame__title {
         font-size: 18px;
     }
     .bg__black img {
+        width: 37px;
+    }
+    .black__footer {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .memeFrame__header {
+        height: 40px;
+    }
+    .memeFrame__side {
         width: 40px;
+    }
+    #lower {
+        height: 40px;
+        padding-top: 0;
+    }
+    .access-btn {
+        padding: 8px;
     }
     
   }
