@@ -52,7 +52,7 @@ downloadBtn.onclick = (e) => {
     e.preventDefault();
 
     console.log(textValue);
-    let isFound = badWords.some(word => textValue.includes(word));
+    let isFound = badWords.some(word => textValue.split(" ").includes(word));
 
     if(isFound) {
         checkWord = false;
@@ -180,8 +180,16 @@ const textField = document.getElementById("lower");
 
 let textValue;
 
-textField.onchange = (e) => {
-    textValue = e.target.value.split(" ");
+textField.onkeypress = (e) => {
+    textValue = e.target.value;
+    var textCount = textValue.split(" ");
+    if(textCount.length >= 2) {
+        var k = e ? e.which : window.event.keyCode;
+    
+        if(k === 32) return false;
+    }
+   
+    
 }
 
 
