@@ -311,6 +311,7 @@ label.access-btn {
 .slider__wrapper {
     padding-bottom: 90px !important;
     padding-top: 20px !important;
+    padding-left: 15px !important;
     
 }
 .meme__slider {
@@ -321,44 +322,91 @@ label.access-btn {
 
 .meme__slideItem {
     height: 300px;
-    width: 300px;
-    
-    position: relative;
+    display: grid;
+    grid-template-columns: 40px 220px 40px;
 }
 
-.meme__outlet {
-    height: 300px;
-    width: 300px;
-}
-.meme__outletFrame {
-    height: 100%;
-    width: 100%;
-}
 .meme__imgItem {
-    height: 215px;
-    width: 215px;
-    position: absolute;
-    top: 44px;
-    left: 44px;
+    height: 220px;
+    width: 220px;
 }
 .meme__imgItem img {
     height: 100%;
     width: 100%;
-    object-fit: cover;
 }
-.meme__template {
+
+.memeslide__head {
+    grid-column: 1/4;
+    height: 40px;
+    background: #e9e4e1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.memeslide__header {
+    font-size: 22px;
+    font-family: "Bebas Neue", sans-serif;
+}
+.slide__black {
+    background: #ec9b01;
+    padding: 0 8px;
+    position: relative;
+}
+.slide__black::before {
     position: absolute;
-    bottom: 5px;
-    left: 50%;
-    transform: translateX(-50%);
+    content: " ";
+    bottom: 0;
+    left: 0;
+    border-top: 15px solid #e9e4e1;
+    border-right: 5px solid transparent;
+}
+
+.slide__black::after {
+    position: absolute;
+    content: " ";
+    top: 0;
+    right: 0;
+    border-bottom: 15px solid #e9e4e1;
+    border-left: 5px solid transparent;
+}
+
+.memeslide__side {
+    width: 40px;
+    background: #e9e4e1;
+    position: relative;
+}
+.memeslide__side h5 {
+    font-size: 10px;
+    font-family: "Bebas Neue", sans-serif ;
+    transform: rotate(90deg);
+    width: 49px;
+}
+
+.memeSide__left {
+    position: absolute;
+    top: 50%;
+    left: -5px;
     
 }
-.meme__template h3 {
-    font-family: "Bebas Neue", sans-serif;
-    color: #000;
-    font-size: 20px;
-
+.memeSide__right {
+    position: absolute;
+    top: 50%;
+    right: -5px;
 }
+
+.meme__template {
+    height: 40px;
+    grid-column: 1/4;
+    background: #e9e4e1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.meme__template h3{
+    font-size: 22px;
+    font-family: "Bebas Neue", sans-serif;
+}
+
 .next__button {
     position: absolute;
     top: 50%;
@@ -401,18 +449,25 @@ label.access-btn {
     .next__button {
         right: 2%;
     }
+    
 }
-@media screen and (min-width: 839px) and (max-width: 1070x) {
+@media screen and (min-width: 804px) and (max-width: 1070px) {
     .next__button {
-        right: 10%;
+        right: 4%;
+    }
+    .meme__slideItem {
+        margin-left: 10%;
+    }
+  
+}
+
+@media screen and (min-width: 560px) and (max-width: 769px) {
+    .meme__slideItem {
+        margin-left: 24%;
     }
     
 }
-/* @media screen and (min-width: 804px) and (max-width: 839x) {
-    .slider__wrapper {
-        padding-left: 5% !important;
-    }
-} */
+
 
 .black__footer {
     padding: 70px 60px 60px;
@@ -663,6 +718,10 @@ label.access-btn {
           width: 100px;
           font-size: 14px;
       }
+      .prev__button,.next__button {
+          transform: scale(0.5);
+          top: 33%;
+      }
   } 
 
   @media screen and (max-width: 420px) {
@@ -699,13 +758,7 @@ label.access-btn {
         margin-top: 0;
     }
 
-    .next-btn img, .prev-btn img {
-        width: 32px;
-    }
-    .meme__outlet {
-        height: 100%;
-        width: 100%;
-    }
+    
   }
 
   
@@ -727,26 +780,37 @@ label.access-btn {
       .sideNav__link {
           font-size: 14px;
       }
+      .slider__wrapper {
+          padding-left: 0 !important;
+          padding-bottom: 20px !important;
+      }
   }
 
-  @media screen and (min-width:737px) and (max-width: 1030px) {
-    
-    .meme__template {
-        left: 33%;
-    }
-  }
+  
 
-  @media screen and (max-width:737px){
+  @media screen and (max-width: 451px) {
+
     .meme__slideItem {
-        display: flex !important;
-        justify-content: center;
+        transform: scale(0.76);
     }
-    .meme__imgItem {
-        left: 50%;
-        transform: translateX(-50%);
+  }
+  @media screen and (max-width: 390px) {
+
+    .meme__slideItem {
+        transform: scale(0.6);
+        margin-left: -20px;
     }
+  }
+  @media screen and (max-width: 321px) {
+
+    .meme__slideItem {
        
-   
+        margin-left: -40px;
+    }
+    
+    .prev__button {
+        left: 28px;
+    }
   }
 
 
