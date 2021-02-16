@@ -229,10 +229,11 @@ body {
     text-align: center;
     outline: none;
     caret-color: #ec9b01;
-    font-weight: 600;
+    font-weight: 900;
     font-family: "Bebas Neue", sans-serif;
     border: none;
     padding-top: 13px;
+    
 }
 
 .warning {

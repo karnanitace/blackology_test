@@ -26,6 +26,9 @@ closeIcon.onclick = () => {
 
 
 window.addEventListener("scroll", sticky);
+
+downloadBtn.disabled = true;
+
 // Load meme image
 var check = false;
 
@@ -41,6 +44,7 @@ inputFile.onchange = (e) => {
         }
         fr.readAsDataURL(files[0]);
         check = true;
+        downloadBtn.disabled = false;
     }
 }
 
