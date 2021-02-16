@@ -452,9 +452,7 @@ label.access-btn {
     
 }
 @media screen and (min-width: 804px) and (max-width: 1070px) {
-    .next__button {
-        right: 4%;
-    }
+    
     .meme__slideItem {
         margin-left: 10%;
     }

@@ -50,7 +50,7 @@ var getCanvas;
 downloadBtn.onclick = (e) => {
     var checkWord = true;
     e.preventDefault();
-
+    
     console.log(textValue);
     let isFound = badWords.some(word => textValue.split(" ").includes(word));
 
@@ -190,6 +190,10 @@ textField.onkeypress = (e) => {
     }
    
     
+}
+
+textField.onchange = (e) => {
+    textValue = e.target.value;
 }
 
 
