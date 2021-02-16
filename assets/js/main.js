@@ -90,9 +90,10 @@ downloadBtn.onclick = (e) => {
 // download canvas
 const downloadCanvas = (getCanvas) => {
     console.log(getCanvas)
-    getCanvas.toBlob(function (blob) {
-        saveAs(blob, "my-IMG.png");
-    });
+    document.body.appendChild(getCanvas);
+    // getCanvas.toBlob(function (blob) {
+    //     saveAs(blob, "my-IMG.png");
+    // });
    
 
 }
@@ -119,16 +120,17 @@ $('.slider__wrapper').slick({
           }
         },
         {
-          breakpoint: 1030,
+          breakpoint: 1070,
           settings: {
             slidesToShow: 2,
             slidesToScroll: 1,
-            infinite: true
+            infinite: true,
+           
 
           }
         },
         {
-          breakpoint: 737,
+          breakpoint: 804,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -175,9 +177,7 @@ var badWords = [
 
 
 
-
 const textField = document.getElementById("lower");
-
 let textValue;
 
 textField.onkeypress = (e) => {
@@ -191,6 +191,12 @@ textField.onkeypress = (e) => {
    
     
 }
+
+
+
+
+
+
 
 
 
