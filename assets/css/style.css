@@ -808,8 +808,12 @@ label.access-btn {
         margin-left: -40px;
     }
     
+    .prev__button , .next__button {
+        top: 40%;
+    }
+
     .prev__button {
-        left: 28px;
+        left: 2px;
     }
   }
 
