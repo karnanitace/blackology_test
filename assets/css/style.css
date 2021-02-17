@@ -207,7 +207,7 @@ body {
 .memeFrame__side h5 {
     transform: rotate(90deg);
     font-size: 12px;
-    font-weight: 400;
+    font-weight: 500;
     letter-spacing: 2.4px;
     font-family: "Bebas Neue", sans-serif;
 }
@@ -387,19 +387,22 @@ label.access-btn {
     font-size: 10px;
     font-family: "Bebas Neue", sans-serif ;
     transform: rotate(90deg);
-    width: 49px;
+    width: 80px;
+    letter-spacing: 2.4px;
+    font-weight: 600;
+
 }
 
 .memeSide__left {
     position: absolute;
     top: 50%;
-    left: -5px;
+    left: -15px;
     
 }
 .memeSide__right {
     position: absolute;
     top: 50%;
-    right: -5px;
+    right: -15px;
 }
 
 .meme__template {
@@ -419,7 +422,7 @@ label.access-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: 7px;
+    right: -3px;
     
 }
 .prev__button {
@@ -459,17 +462,24 @@ label.access-btn {
     }
     
 }
-@media screen and (min-width: 804px) and (max-width: 1070px) {
+@media screen and (min-width: 804px) and (max-width: 1023px) {
     
     .meme__slideItem {
-        margin-left: 10%;
+        margin-left: 6%;
+    }
+  
+}
+@media screen and (min-width: 1024px) and (max-width: 1070px) {
+    
+    .meme__slideItem {
+        margin-left: 14%;
     }
   
 }
 
 @media screen and (min-width: 560px) and (max-width: 769px) {
     .meme__slideItem {
-        margin-left: 24%;
+        margin-left:23%;
     }
     
 }
@@ -676,7 +686,7 @@ label.access-btn {
     .menuBar__icon {
         display: block;
         cursor: pointer;
-        margin-top: 10px;
+        margin-top: 16px;
     }
     .navbar_left, .navbar_right {
         display: none;
@@ -798,13 +808,14 @@ label.access-btn {
 
     .meme__slideItem {
         transform: scale(0.76);
+        margin-left: -18px;
     }
   }
   @media screen and (max-width: 390px) {
 
     .meme__slideItem {
         transform: scale(0.6);
-        margin-left: -20px;
+        margin-left: -30px;
     }
   }
   @media screen and (max-width: 321px) {
@@ -819,9 +830,13 @@ label.access-btn {
     }
 
     .prev__button {
-        left: 2px;
+        left: -10px;
     }
   }
 
 
-  
+  @media screen and (min-width: 1630px) {
+      .slider__wrapper {
+          padding-left: 91px !important;
+      }
+  }
