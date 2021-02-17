@@ -14,6 +14,10 @@
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" />
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" />
 
+     <!-- jsSocial share -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsSocials/1.5.0/jssocials.min.css" integrity="sha512-XdjXkWkkWkIFXdaUPqMs2QZ852gpPlCcOGuh3K7moTCvtYQTifqrsOfkgca5XKCDTwzFnJ4L8fiz7T+Z5EDAmA==" crossorigin="anonymous" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsSocials/1.5.0/jssocials-theme-flat.min.css" integrity="sha512-lIIrrliN8r/MakL5l1AMMiEcedPqhY8+lNOs0YobWBnwHVVljTb34tsyYGxg4KMFEXU2mg5gxsgJQF6axIidKw==" crossorigin="anonymous" />
+
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Blackology Meme Generator</title>
 </head>
@@ -33,7 +37,7 @@
                 <li class="navbar__item"><a href="" class="navbar__link">Home</a></li>
                 <li class="navbar__item"><a href="" class="navbar__link">Shop</a></li>
                 <li class="navbar__item"><a href="" class="navbar__link">About</a></li>
-                <li class="navbar__item"><a href="" class="navbar__link">Sign in Petintion</a></li>
+                <li class="navbar__item"><a href="" class="navbar__link">Sign in Petition</a></li>
             </ul>
         </nav>
         <div class="logo">
@@ -98,8 +102,11 @@
                     <input type="file" name="meme" id="inputFile" accept="image/*">
                     <label for="inputFile" class="access-btn" ><i class="fas fa-camera"></i>Add</label>
                     <button  id="share" class="access-btn"><i class="fas fa-share-alt"></i>Share</button>
+                    <div id="socialShare"></div>
                     <button  id="downloads" class="access-btn"><i class="fas fa-download"></i>Download</button>
                 </div>
+
+                
                 
             </div>
         </div>
@@ -336,6 +343,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
    
 
+    <!-- jsSocial share  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsSocials/1.5.0/jssocials.min.js" integrity="sha512-3Ov4ZromgNap5Adyn3V0/q2CAaW3u38FTpOhDNuM5zkQ7Zcm9/NMtuO7xmBsb/HPqdA2AP9AHq1N2WOUdNzkKA==" crossorigin="anonymous"></script>
     
     <!-- file saved and blob -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js" integrity="sha512-Qlv6VSKh1gDKGoJbnyA5RMXYcvnpIqhO++MhIM2fStMcGT9i2T//tSwYFlcyoRRDcDZ+TYHpH8azBBCyhpSeqw==" crossorigin="anonymous"></script>
