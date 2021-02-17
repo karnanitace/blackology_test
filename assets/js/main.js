@@ -54,9 +54,10 @@ var getCanvas;
 downloadBtn.onclick = (e) => {
     var checkWord = true;
     e.preventDefault();
-    
-    console.log(textValue);
-    let isFound = badWords.some(word => textValue.split(" ").includes(word));
+
+    // console.log(textValue);
+    var textValueLower = textValue.split(" ").map(x => x.toLowerCase());
+    let isFound = badWords.some(word => textValueLower.includes(word));
 
     if(isFound) {
         checkWord = false;
@@ -93,11 +94,11 @@ downloadBtn.onclick = (e) => {
 
 // download canvas
 const downloadCanvas = (getCanvas) => {
-    console.log(getCanvas)
-    document.body.appendChild(getCanvas);
-    // getCanvas.toBlob(function (blob) {
-    //     saveAs(blob, "my-IMG.png");
-    // });
+    // console.log(getCanvas)
+    // document.body.appendChild(getCanvas);
+    getCanvas.toBlob(function (blob) {
+        saveAs(blob, "my-IMG.png");
+    });
    
 
 }
@@ -176,7 +177,7 @@ var badWords = [
     'wail','wallow','wane','waning','wanton','war-like','warily','wariness','warlike','warned','warning','warp','warped','wary','washed-out','waste','wasted','wasteful','wastefulness','wasting','water-down','watered-down','wayward','weak','weaken','weakening','weaker','weakness','weaknesses','weariness','wearisome','weary','wedge','weed','weep','weird','weirdly','wheedle','whimper','whine','whining','whiny','whips','wicked','wickedly','wickedness','wild','wildly','wiles','wilt','wily','wimpy','wince','wobble','wobbled','wobbles','woe','woebegone','woeful','woefully','womanizer','womanizing','worn','worried','worriedly','worrier','worries','worrisome','worry','worrying','worryingly','worse','worsen','worsening','worst','worthless','worthlessly','worthlessness','wound','wounds','wrangle','wrath','wreak','wreaked','wreaks','wreck','wrest','wrestle','wretch','wretched','wretchedly','wretchedness','wrinkle','wrinkled','wrinkles','writhe','wrong','wrongful','wrongly','wrought',
     'Yawn','poor','poverty','can’t','irresponsible','fool','foolishness','No','failure','bad','ashamed','incompetent','disappointment','don’t','wrong','deadbeat',
     'zap','zapped','zaps','zealot','zealous','zealously','zombie',
-    'Monkey','Ape','Boogie','Nigga','Porch monkey','Meenie','Ghetto','Hood','Negro','Abeed','Uppity','Af','Ape','Béni-oui-oui','Bluegum','Boogie','Buck','Burrhead ','Colored','Coon','Crow','Eggplant','Fuzzies','Fuzzy-Wuzzy','Golliwogg','Jigaboo','jiggabo','jijjiboo','zigabo','jig','jigg','jiggy','jigga','Jim Crow','Jim Fish','Jungle bunny','Kaffir','kaffer','kafir','kaffre','Macaca','macaque','Mammy','Monkey','Mosshead','Munt','Nig-nog','Nigger','niggar','niggur','niger','nigor','nigre','nigar','nigga','niggah nig','nigguh','Niglet','nigglet','Nigra','negra','niggra','nigrah','nigruh','Pickaninny','Porch monkey','Powder burn','Quashie','Sambo','Smoked Irishman','Sooty','Spade','Spook','Tar baby','Teapot','Thicklips','bootlips','Coon','Mulatto','Uncle Tom','Uncle Ruckus','Oreo','Aunt Jemima','Aunt Jane','Aunt Mary','Aunt Sally','Aunt Thomasina','Afro-Saxon','Ann','Miss Ann','Wigger','Wigga','wegro','Rhineland Bastard'
+    'monkey','ape','boogie','nigga','porch monkey','meenie','ghetto','hood','negro','abeed','uppity','af','ape','béni-oui-oui','bluegum','boogie','buck','burrhead ','bolored','coon','crow','eggplant','Fuzzies','fuzzy-wuzzy','golliwogg','jigaboo','jiggabo','jijjiboo','zigabo','jig','jigg','jiggy','jigga','jim crow','jim fish','jungle bunny','kaffir','kaffer','kafir','kaffre','macaca','macaque','mammy','monkey','mosshead','munt','nig-nog','nigger','niggar','niggur','niger','nigor','nigre','nigar','nigga','niggah nig','nigguh','niglet','nigglet','Nigra','negra','niggra','nigrah','nigruh','pickaninny','porch monkey','powder burn','quashie','sambo','smoked irishman','sooty','spade','spook','tar baby','teapot','thicklips','bootlips','coon','mulatto','uncle Tom','uncle ruckus','oreo','aunt jemima','aunt jane','aunt mary','aunt sally','aunt thomasina','afro-saxon','ann','miss ann','wigger','wigga','wegro','rhineland bastard'
 ]
 
 
@@ -196,11 +197,10 @@ textField.onkeypress = (e) => {
     
 }
 
+
 textField.onchange = (e) => {
     textValue = e.target.value;
 }
-
-
 
 
 
