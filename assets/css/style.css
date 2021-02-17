@@ -477,6 +477,13 @@ label.access-btn {
   
 }
 
+@media screen and (min-width: 470px) and (max-width: 520px) {
+    .meme__slideItem {
+        margin-left:10%;
+    }
+    
+}
+
 @media screen and (min-width: 520px) and (max-width: 569px) {
     .meme__slideItem {
         margin-left:15%;
