@@ -458,7 +458,7 @@ label.access-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: -3px;
+    right: 0px;
     
 }
 .prev__button {
