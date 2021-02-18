@@ -13,7 +13,7 @@ const share = document.getElementById("share");
 const socialShare = document.getElementById("socialShare");
 const bgBlack = document.querySelector(".bg__black img");
 const textArea = document.getElementById("lower");
-
+const memeSide = document.querySelectorAll(".memeFrame__side h5");
 
 
 function sticky(){
@@ -66,6 +66,9 @@ downloadBtn.onclick = (e) => {
     var checkWord = true;
     e.preventDefault();
     bgBlack.classList.add("add-margin");
+    memeSide.forEach(elem => {
+        elem.classList.add("add-fontSize");
+    })
 
     // console.log(textValue);
     var textValueLower = textValue.split(" ").map(x => x.toLowerCase());
@@ -75,26 +78,23 @@ downloadBtn.onclick = (e) => {
         checkWord = false;
     }
     
-    // build
+    // build and save
 
     if(checkWord == true) {
         if(check == true){
-            // html2canvas(element, {
-            //     onrendered: function(canvas) {
-            //         getCanvas = canvas;
-            //         downloadCanvas(getCanvas);
-            //         bgBlack.classList.remove("add-margin");
-            //     }
-            // })
+            
             domtoimage.toBlob(document.querySelector(".meme__wrapper"))
                 .then(function (blob) {
-                    window.saveAs(blob, 'my-img.png');
+                    window.saveAs(blob, 'myIMG.png');
                  });
                  bgBlack.classList.remove("add-margin");
-            
+
+                 setTimeout(() => {
+                    memeSide.forEach(elem => {
+                        elem.classList.remove("add-fontSize");
+                    })
+                }, 100);
                  
-           
-    
             
         } else {
             alert("Please upload your meme image first");
@@ -110,19 +110,7 @@ downloadBtn.onclick = (e) => {
 }
 
 
-// download canvas
-// const downloadCanvas = (getCanvas) => {
 
-    
-  
-//     getCanvas.toBlob(function (blob) {
-//         saveAs(blob, "my-IMG.jpg");
-//     });
-    
-
-   
-
-// }
 
 
 
