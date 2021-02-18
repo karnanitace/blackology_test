@@ -88,7 +88,7 @@ downloadBtn.onclick = (e) => {
             // })
             domtoimage.toBlob(document.querySelector(".meme__wrapper"))
                 .then(function (blob) {
-                    window.saveAs(blob, 'my-node.png');
+                    window.saveAs(blob, 'my-img.png');
                  });
                  bgBlack.classList.remove("add-margin");
             
