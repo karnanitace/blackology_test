@@ -264,7 +264,7 @@ body {
 
 .warning {
     text-align: center;
-    margin: 10px auto;
+    margin: 20px auto;
     padding: 5px;
     color: rgb(94, 35, 35);
     background: gray;
@@ -874,12 +874,16 @@ label.access-btn {
         transform: scale(0.76);
         margin-left: -18px;
     }
+    
   }
   @media screen and (max-width: 390px) {
 
     .meme__slideItem {
         transform: scale(0.6);
         margin-left: -30px;
+    }
+    .warning  {
+        width: 260px;
     }
   }
   @media screen and (max-width: 321px) {
