@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Bebas+Neue:regular);
+/* @import url(https://fonts.googleapis.com/css?family=Bebas+Neue:regular); */
 @import url(https://fonts.googleapis.com/css?family=Nunito+Sans:200,200italic,300,300italic,regular,italic,600,600italic,700,700italic,800,800italic,900,900italic);
 @import url(https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
 * {
@@ -9,6 +9,12 @@
 
 body {
     font-family: "Montserrat", sans-serif;
+}
+
+@font-face {
+    font-family: "Bebas Neue";
+    src: local("BebasNeue.otf"),
+      url("BebasNeue.otf") format("opentype");
 }
 
 
@@ -144,6 +150,7 @@ body {
     position: relative;
     width: 360px;
     height: 360px;
+    font-family: "Bebas Neue";
    
 }
 .memes{
@@ -166,7 +173,7 @@ body {
     background: #fff;
 }
 .memeFrame__title {
-    font-family: "Bebas Neue", sans-serif;
+    font-family: "Bebas Neue";
     font-size: 26px;
     background: transparent;
     
@@ -196,7 +203,7 @@ body {
     font-size: 12px;
     
     letter-spacing: 2.4px;
-    font-family: "Bebas Neue", sans-serif;
+    font-family: "Bebas Neue";
 }
 
 .left__side {
@@ -224,7 +231,7 @@ body {
     outline: none;
     caret-color: #ec9b01;
     font-weight: 600;
-    font-family: "Bebas Neue", sans-serif;
+    font-family: "Bebas Neue";
     border: none;
     padding-top: 13px;
 }

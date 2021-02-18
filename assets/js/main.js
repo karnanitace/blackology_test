@@ -79,14 +79,20 @@ downloadBtn.onclick = (e) => {
 
     if(checkWord == true) {
         if(check == true){
-            html2canvas(element, {
-                onrendered: function(canvas) {
-                    getCanvas = canvas;
-                    downloadCanvas(getCanvas);
-                    bgBlack.classList.remove("add-margin");
-                }
-            })
+            // html2canvas(element, {
+            //     onrendered: function(canvas) {
+            //         getCanvas = canvas;
+            //         downloadCanvas(getCanvas);
+            //         bgBlack.classList.remove("add-margin");
+            //     }
+            // })
+            domtoimage.toBlob(document.querySelector(".meme__wrapper"))
+                .then(function (blob) {
+                    window.saveAs(blob, 'my-node.png');
+                 });
+                 bgBlack.classList.remove("add-margin");
             
+                 
            
     
             
@@ -105,16 +111,18 @@ downloadBtn.onclick = (e) => {
 
 
 // download canvas
-const downloadCanvas = (getCanvas) => {
-    // console.log(getCanvas)
-    // document.body.appendChild(getCanvas);
-    getCanvas.toBlob(function (blob) {
-        saveAs(blob, "my-IMG.jpg");
-    });
+// const downloadCanvas = (getCanvas) => {
+
+    
+  
+//     getCanvas.toBlob(function (blob) {
+//         saveAs(blob, "my-IMG.jpg");
+//     });
+    
 
    
 
-}
+// }
 
 
 
