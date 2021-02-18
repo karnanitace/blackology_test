@@ -382,6 +382,7 @@ label.access-btn {
     height: 40px;
     background: #e9e4e1;
     display: flex;
+    display: -webkit-flex;
     align-items: center;
     justify-content: center;
 }
@@ -825,7 +826,7 @@ label.access-btn {
     }
     #lower {
         height: 40px;
-        padding-top: 0;
+        padding-top: 6px;
     }
     .meme__actions {
         margin-top: 0;
